@@ -36,7 +36,7 @@ document.getElementById('buyMedicine').addEventListener('click', function(event)
 // Lấy tham chiếu đến các phần tử HTML
 var heightInput = document.getElementById('height');
 var weightInput = document.getElementById('weight');
-var bmiInput = document.getElementById('BMI');
+var bmiInput = document.getElementById('bmi');
 var calculateButton = document.getElementById('cal');
 
 // Hàm tính toán BMI
@@ -63,22 +63,24 @@ calculateButton.addEventListener('click', function() {
         // Tính toán BMI
         var bmi = calculateBMI(height, weight);
         // Hiển thị kết quả BMI lên ô BMI
-        bmiInput.value = bmi;
+        bmiInput.textContent = bmi;
         
         // Hiển thị kết quả BMI trong console cho mục đích kiểm tra
         console.log('BMI:', bmi);
+
+        var result = document.getElementById("result")
         if(bmi < 18.5){
-            alert('Bạn bị gầy, nguy cơ phát triển bệnh thấp');
+            result.textContent = 'Bạn bị gầy, nguy cơ phát triển bệnh thấp'
         } else if(bmi >= 18.5 && bmi <= 24.9){
-            alert('Bạn bình thường, nguy cơ phát triển bệnh trung bình');
+            result.textContent = 'Bạn bình thường, nguy cơ phát triển bệnh trung bình'
         } else if(bmi >= 25 && bmi <= 29.9){
-            alert('Bạn hơi béo, nguy cơ phát triển bệnh cao');
+            result.textContent = 'Bạn hơi béo, nguy cơ phát triển bệnh cao'
         } else if(bmi >= 30 && bmi <= 34.9){
-            alert('Bạn béo phì cấp độ 1, nguy cơ phát triển bệnh cao');
+            result.textContent = 'Bạn béo phì cấp độ 1, nguy cơ phát triển bệnh cao'
         } else if(bmi >= 35 && bmi <= 39.9){
-            alert('Bạn béo phì cấp độ 2, nguy cơ phát triển bệnh rất cao');
+            result.textContent = 'Bạn béo phì cấp độ 2, nguy cơ phát triển bệnh rất cao'
         } else if(bmi > 40){
-            alert('Bạn béo phì cấp độ 3, nguy cơ phát triển bệnh nguy hiểm');
+            result.textContent = 'Bạn béo phì cấp độ 3, nguy cơ phát triển bệnh nguy hiểm'
         }
     }
 });
