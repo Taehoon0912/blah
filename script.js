@@ -30,6 +30,29 @@ document.getElementById('buyMedicine').addEventListener('click', function(event)
     // Mở liên kết trong một tab mới
     window.open(this.href, '_blank');
 });
+document.getElementById('bmiKid').addEventListener('click', function(event) {
+    // Ngăn chặn hành vi mặc định của liên kết
+    event.preventDefault();
+    // Mở liên kết trong một tab mới
+    window.open(this.href, '_blank');
+});
+document.getElementById('bmiYoung').addEventListener('click', function(event) {
+    // Ngăn chặn hành vi mặc định của liên kết
+    event.preventDefault();
+    // Mở liên kết trong một tab mới
+    window.open(this.href, '_blank');
+});
+document.getElementById('bmiOld').addEventListener('click', function(event) {
+    // Ngăn chặn hành vi mặc định của liên kết
+    event.preventDefault();
+    // Mở liên kết trong một tab mới
+    window.open(this.href, '_blank');
+});
+document.getElementById('healthCare').addEventListener('click', function(event) {
+    // Ngăn chặn hành vi mặc định của liên kết
+    event.preventDefault();
+    // Mở liên kết trong một tab mới
+    window.open(this.href, '_blank');
 
 //Tính bmi
 
